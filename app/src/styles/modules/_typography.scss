@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$font1: Inter, sans-serif;
+
+// ? font: [weight size  family] Note:  1rem = 10px
+
+$h1_banner: 700 4.8rem $font1;
+$h1_modal: 400 3.2rem $font1;
+$h1: 700 2.4rem $font1;
+$h1-bolder: 900 2.4rem $font1;
+$h1_search: 700 4rem $font1;
+$h2: 700 2rem $font1;
+$h2-lighter: 500 2rem $font1;
+$h2-light: 300 2rem $font1;
+$h3: 600 1.6rem $font1;
+$h3_lighter: 300 1.6rem $font1;
+$h3_bolder: 700 1.6rem $font1;
+$h4: 500 1.4rem $font1;
+$h4_lighter: 400 1.4rem $font1;
+$h5: 400 1.6rem $font1;
+$h5_bolder: 500 1.6rem $font1;
+$p1: 700 1.4rem $font1;
+$p1-light: 400 1.4rem $font1;
+$p2: 500 1.2rem $font1;
+$p2-bold: 700 1.2rem $font1;
+$p3: 600 1.1rem $font1;
+$p3-bold: 700 1.1rem $font1;
+$p3-light: 300 1.1rem $font1;
+$p4: 500 1rem $font1;

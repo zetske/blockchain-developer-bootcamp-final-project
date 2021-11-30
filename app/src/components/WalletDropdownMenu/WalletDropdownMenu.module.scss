@@ -1,0 +1,64 @@
+@use '~/styles/modules' as *;
+
+.WalletDropdownMenu {
+	position: absolute;
+	right: 1.6rem;
+	top: 6.4rem;
+	z-index: 10;
+
+	@include medium-screens() {
+		right: 1.8rem;
+	}
+
+	@include desktop-screens() {
+		right: 6rem;
+	}
+
+	.divider {
+		width: 100%;
+		height: 1px;
+		margin-bottom: 1rem;
+		background-color: lightgrey;
+	}
+
+	.ulSmall {
+		height: 3.5rem;
+		font: $p2;
+		@include flexContainer(column, space-between, flex-start);
+		margin: 0rem
+	}
+	.accountDetail {
+		
+		margin: 0
+	}
+	.link {
+		cursor: pointer;
+	}
+	.value {
+		font: $p1;
+		margin: 0.5rem 0
+	}
+	ul {
+		width: 100%;
+		height: 100%;
+		@include flexContainer(column);
+
+		li:not(:last-child) {
+			margin: 0 auto 1.6rem 0;
+		}
+
+		li {
+			width: 100%;
+			height: 2.4rem;
+			@include flexContainer(row, flex-start, center);
+
+			a,
+			button {
+				@include flexContainer(row, flex-start, center);
+				width: 100%;
+				text-transform: capitalize;
+				padding: 0.8rem 0;
+			}
+		}
+	}
+}

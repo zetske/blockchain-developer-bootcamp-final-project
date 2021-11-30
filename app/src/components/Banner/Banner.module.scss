@@ -1,0 +1,34 @@
+@use '~/styles/modules' as *;
+
+.Banner {
+  border-radius: 10px;
+  height: 60px;
+  width: 100%;
+  position: relative;
+  background-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+  margin-top: 30px;
+  font-size: 12px;
+  @include flexContainer(row, space-around, center);
+
+  a {
+    padding: 5px 30px;
+    &:hover {
+      color: red;
+    }
+    
+ }
+ .divider {
+  width: 1px;
+  border: 0.5px solid lightgray;
+  height: 30px
+}
+ @include small-screens() {
+  position: absolute;
+  bottom: 100px;
+  width: 70vw;
+  font-size: 18px;
+ }
+}
+ 

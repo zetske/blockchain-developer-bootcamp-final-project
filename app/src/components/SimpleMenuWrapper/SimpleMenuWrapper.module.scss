@@ -1,0 +1,12 @@
+@use '~/styles/modules' as *;
+
+.SimpleMenuWrapper {
+  color: var(--background-strong);
+  background-color: var(--text-color);
+  min-width: 16rem;
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  font: $h4;
+  box-shadow: $dropdownShadow1;
+  @include flexContainer(column);
+}

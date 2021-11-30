@@ -1,0 +1,119 @@
+@use '~/styles/modules' as *;
+
+.Navbar {
+  background-color: transparent;
+  width: 100%;
+  height: 4rem;
+  margin: 0 0 1.6rem 0;
+  @include flexContainer(row, flex-end, center);
+  font: $p1;
+  .logo {
+    position: absolute;
+    left: 5rem;
+    height: 5rem;
+  }
+
+  .dropdownButton {
+    width: 2rem;
+  }
+  .chevronButton {
+    position: absolute;
+    right: -0.6rem;
+    top: 01rem;
+    height: 2rem;
+    width: 2rem;
+    @include small-screens() {
+      right: -0.5rem
+    }
+    transition: 2s ease-in-out;
+  }
+
+  .button {
+    @include flexContainer(row, space-between, center);
+    height: 4rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    position: relative;
+    width: 17rem;
+    .gradient {
+      @include textGradient();
+    }
+    &:hover:not(.avatar),
+    &:focus-visible {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .icon {
+      width: 2rem;
+      margin: auto;
+    }
+
+    .label {
+      display: none;
+
+      margin: 0 0 0 0.8rem;
+      color: var(--text-color);
+
+      @include small-screens() {
+        display: block;
+      }
+    }
+  }
+
+  .divider {
+    width: 1px;
+    height: 100%;
+    background-color: var(--background3);
+    margin-left: 1.6rem;
+  }
+
+  .navLinks {
+    @include flexContainer(row, space-between, center);
+    color: var(--text-color);
+
+    .buttonLink {
+      height: 4rem;
+      margin: 0 0.8rem;
+      padding: 0.8rem;
+      border-radius: 1.2rem;
+      @include flexContainer(row, center, center);
+      &:hover,
+      &:focus-visible {
+        background-color: rgba(255, 255, 255, 0.05);
+        span {
+          @include textGradient();
+        }
+      }
+      &:active {
+        background-color: rgba(255, 255, 255, 0.2);
+        span {
+          @include textGradient();
+        }
+      }
+    }
+
+    li {
+      a {
+        height: 4rem;
+        margin: 0 0.8rem;
+        padding: 0.8rem;
+        border-radius: 1.2rem;
+        @include flexContainer(row, center, center);
+        &:hover,
+        &:focus-visible {
+          background-color: rgba(255, 255, 255, 0.05);
+          span {
+            @include textGradient();
+          }
+        }
+        &:active {
+          background-color: rgba(255, 255, 255, 0.2);
+          span {
+            @include textGradient();
+          }
+        }
+      }
+    }
+  }
+}

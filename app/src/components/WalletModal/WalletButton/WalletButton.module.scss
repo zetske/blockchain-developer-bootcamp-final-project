@@ -1,0 +1,38 @@
+@use '~/styles/modules' as *;
+
+.WalletButton {
+	background-color: black;
+	width: 300px;
+	padding: 2.5rem 2rem;
+	height: 10.7rem;
+	border-radius: 1rem;
+	border: 1px solid $grey2;
+	margin: 1rem 0;
+	font: $h3_lighter;
+	color: $white;
+	@include flexContainer(row, space-around, center);
+	p {
+		text-align: left;
+		font: $h4_lighter
+	}
+}
+
+.WalletButton:hover {
+	//background-color: $grey3;
+	color: #c87038;
+	border: 1px solid #c87038;
+}
+
+.icon {
+	height: 4rem;
+	width: 4rem;
+}
+
+.outerContainer {
+	padding: 1rem 0.5rem;
+	background: $cream-gradient;
+	width: 100%;
+	border-radius: 3.2rem;
+	height: 7rem;
+	@include flexContainer();
+}

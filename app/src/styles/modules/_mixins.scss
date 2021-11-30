@@ -1,0 +1,132 @@
+$small: 600px;
+$medium: 768px;
+$tablet: 1024px;
+$desktop: 1440px;
+
+// defaults are [row, space-between, center]
+@mixin flexContainer($direction: row, $justify: space-between, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin textGradient() {
+  background: linear-gradient(to right, #fa9579, #ffffff);
+  background-clip: text;
+  color: transparent;
+}
+@mixin textBlueGradient() {
+  background: linear-gradient(to right, #58def4, #ffffff);
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin textGradientVertical() {
+  background: linear-gradient(to bottom, #fa9579, #ffffff);
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin truncateText() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin gridWrap() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include small-screens() {
+    justify-content: flex-start;
+  }
+}
+
+@mixin masonryLayout() {
+  display: grid;
+
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 1.6rem;
+  & > * {
+    width: 100%;
+    grid-column: span 12;
+  }
+  @media (min-width: 600px) {
+    grid-gap: 2.4rem;
+    & > * {
+      grid-column: span 6;
+    }
+  }
+  @media (min-width: 960px) {
+    grid-gap: 3.2rem;
+    & > * {
+      grid-column: span 4;
+    }
+  }
+  @media (min-width: 1280px) {
+    & > * {
+      grid-column: span 3;
+    }
+  }
+}
+
+@mixin lineClamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin scrollbar(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+    border-radius: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+    border-radius: $size;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+    border-radius: $size;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+//   Media Queries
+
+@mixin small-screens {
+  @media (min-width: $small) {
+    @content;
+  }
+}
+@mixin medium-screens {
+  @media (min-width: $medium) {
+    @content;
+  }
+}
+@mixin tablet-screens {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+@mixin desktop-screens {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}

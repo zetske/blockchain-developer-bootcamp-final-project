@@ -1,0 +1,89 @@
+@use "~/styles/modules" as *;
+
+.home {
+  @include flexContainer(column, flex-start, center);
+  @include small-screens(){
+    @include flexContainer(row, space-between, center);
+    height: 80vh
+  }
+  
+  .text {
+    @include flexContainer(column, center, flex-start);
+    height: auto;
+    // @include small-screens(){
+    //   height: 80vh
+    // }
+    h3 {
+      font-size: 20px;
+      color: red;
+    }
+
+    h1 {
+      font-size: 44px;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid white;
+      font-size: 20px;
+      &:hover {
+        color: red;
+        border: 1px solid red;
+      }
+    }
+  }
+  .imageContainer {
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 30px;
+    opacity: 0.8;
+    @include small-screens(){
+      width: 60%;
+      margin-top: 0;
+    }
+  }
+}
+
+.imageContainer {
+  height: 50%;
+  width: auto;
+}
+
+.column {
+  margin-top: 2rem;
+  @include flexContainer(column, center);
+
+  .link {
+    margin: 4rem auto;
+  }
+
+  .title {
+    color: var(--text-color);
+    margin: 4rem auto;
+    text-align: center;
+  }
+
+  .collectionCardGrid {
+    width: 100%;
+    @include masonryLayout();
+  }
+
+  .nftCardGrid {
+    width: 100%;
+    @include masonryLayout();
+  }
+
+  .upcoming {
+    @include flexContainer(column, center, center);
+    flex-wrap: wrap;
+    width: 100%;
+    @include gridWrap();
+    @include medium-screens() {
+      @include flexContainer(row, space-around, center);
+    }
+  }
+}
