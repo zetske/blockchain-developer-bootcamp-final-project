@@ -30,8 +30,6 @@ The rinkeby directory contains the hardhat config and scripts necessary to deplo
 
 The three directories have the following in common: They all use Node.js and contain a package.json from which dependencies can be installed by running `yarn install`.
 
-...
-
 #### Installation
 
 Ensure you have Node.js and yarn installed on your system before you proceed with the setup for any of the child directories. 
@@ -44,7 +42,7 @@ cp app/.env.example app/.env
 cp rinkeby/.env.example rinkeby/.env
 ```
 
-You will now need to update all the `.env` files with a valid private key.The API has already been added as an environment variable so that you don't have to enter this yourself. 
+You will now need to update all the `.env` files with a valid private key and public key.The API has already been added as an environment variable so that you don't have to enter this yourself. 
 
 #### For app
 
