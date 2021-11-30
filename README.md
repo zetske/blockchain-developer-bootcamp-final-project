@@ -1,7 +1,9 @@
 # My project: Ticket Monster for ticket sales
 
 My Ethereum Address: 
-0x1169bA2A1E978e8215068baB33ef758142217E27
+0x1169bA2A1E978e8215068baB33ef758142217E27 
+(https://etherscan.io/address/0x1169bA2A1E978e8215068baB33ef758142217E27)
+
 https://www.linkedin.com/in/anzette-muntingh-071408b7/
 
 The frontend of this project is hosted on Vercel at https://bootcamp-ticket-monster.vercel.app/.
@@ -51,8 +53,8 @@ Change directory: `cd app`
 You need to use nvm to set the node.js version to 16.11.1. When you are in any of the directories (app, chain or rinkeby) you can use the command `nvm use` to select the correct nvm version that is present in the .nvmrc file.
 
 Once ready, run:
-`yarn install` - to install all dependencies
-`yarn dev` - to start up frontend server (note that there will be errors if you have not yet installed dependencies on the `chain` directory)
+- `yarn install` - to install all dependencies
+- `yarn dev` - to start up frontend server (note that there will be errors if you have not yet installed dependencies on the `chain` directory)
 
 #### For chain
 
@@ -60,10 +62,10 @@ Change directory: `cd chain`
 
 Once ready, run:
 
-`yarn install` - to install all dependencies
-`yarn hardhat compile` - to compile the contract
-`yarn hardhat deploy` - to deploy the contract
-`yarn test` - to run tests for contract
+- `yarn install` - to install all dependencies
+- `yarn hardhat compile` - to compile the contract
+- `yarn hardhat deploy` - to deploy the contract
+- `yarn test` - to run tests for contract
 
 #### For rinkeby
 
@@ -71,7 +73,7 @@ Change directory: `cd rinkeby`
 
 Once ready, run:
 
-`yarn install` - to install all dependencies
-`yarn copy-contract` - to get the contract ready
-`yarn hardhat compile` - to compile the contract
-`yarn hardhat deploy` - to deploy the contract
+- `yarn install` - to install all dependencies
+- `yarn copy-contract` - to get the contract ready
+- `yarn hardhat compile` - to compile the contract
+- `npx hardhat run scripts/deploy.js` - to deploy the contract

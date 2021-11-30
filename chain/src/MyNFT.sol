@@ -1,7 +1,6 @@
 //Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
 // SPDX-License-Identifier: MIT
-// REF-1 Attack-Vector-Prevention
-pragma solidity ^0.8.0;
+pragma solidity 0.8.9;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
@@ -37,7 +36,6 @@ contract MyNFT is ERC721URIStorage, Ownable {
     // Storage for minters
     mapping(address => Minter) internal minters;
 
-    // REF-2 Attack-Vector-Prevention
     modifier onlyMinter() {
         require(
             minters[msg.sender].isMinter && minters[msg.sender].isActive,
@@ -64,10 +62,18 @@ contract MyNFT is ERC721URIStorage, Ownable {
         minters[minter].isActive = isActiveMinter;
     }
 
-    // REF-2 Attack-Vector-Prevention
     function setTokenURI(string calldata _uri) public onlyMinter {
         uri = _uri;
     }
+
+    // function tokenURI(uint256 tokenId)
+    //     public
+    //     view
+    //     override
+    //     returns (string memory)
+    // {
+    //     return uri;
+    // }
 
     /**
      * @param   recipient Address of the nft receiver
