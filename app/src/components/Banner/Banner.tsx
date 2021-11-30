@@ -4,11 +4,11 @@ import classes from "./Banner.module.scss";
 function Banner() {
   return (
     <div className={classes.Banner}>
-      <a href='https://github.com/zetske' target="_blank" rel="noopener noreferrer">Details</a>
+      <a href='https://github.com/zetske/blockchain-developer-bootcamp-final-project' target="_blank" rel="noopener noreferrer">Details</a>
       <span className={classes.divider}></span>
-      <a href='https://github.com/zetske/blockchain-developer-bootcamp-final-project' target="_blank" rel="noopener noreferrer">Smart Contract</a>
+      <a href='https://github.com/zetske/blockchain-developer-bootcamp-final-project/blob/main/chain/src/MyNFT.sol' target="_blank" rel="noopener noreferrer">Smart Contract</a>
       <span className={classes.divider}></span>
-      <a href='https://rinkeby.etherscan.io/address/0x0389c3577182d9Db47204f2474A8037f4badcBeD' target="_blank" rel="noopener noreferrer">Etherscan</a>
+      <a href='https://rinkeby.etherscan.io/address/0x952e751565061097d0becD5B18B29F6033C589d3' target="_blank" rel="noopener noreferrer">Etherscan</a>
     </div>
   );
 }
