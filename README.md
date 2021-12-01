@@ -74,4 +74,4 @@ Once ready, run:
 - `yarn install` - to install all dependencies
 - `yarn copy-contract` - to get the contract ready
 - `yarn hardhat compile` - to compile the contract
-- `npx hardhat run scripts/deploy.js` - to deploy the contract
+- `npx hardhat run scripts/deploy.js` - to deploy the contract (The contract address you receive here you need to add to the .env for `NEXT_PUBLIC_NFT` in the `/app` directory)
