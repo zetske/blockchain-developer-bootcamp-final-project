@@ -1,2 +1,2 @@
 This contract is deployed on Rinkeby network
-Contract address: 0x0389c3577182d9Db47204f2474A8037f4badcBeD
+Contract address: 0x952e751565061097d0becD5B18B29F6033C589d3
